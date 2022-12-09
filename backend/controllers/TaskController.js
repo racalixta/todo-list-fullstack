@@ -143,7 +143,6 @@ module.exports = class TaskController {
 
     }
 
-
     const token = getToken(req);
     const user = await getUserByToken(token);
 
