@@ -11,7 +11,7 @@ app.use(express.json());
 //   origin: 'http://localhost:3000'
 // }));
 
-app.use('/users', UserRoutes)
-app.use('/tasks', TaskRoutes)
+app.use('/users', UserRoutes);
+app.use('/tasks', TaskRoutes);
 
 app.listen(5000);

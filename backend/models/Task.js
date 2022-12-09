@@ -1,8 +1,7 @@
-const { trusted } = require('../db/conn');
 const mongoose = require('../db/conn');
 const { Schema } = mongoose;
 
-const Tasl = mongoose.model(
+const Task = mongoose.model(
   'Task',
   new Schema (
     {
@@ -15,8 +14,9 @@ const Tasl = mongoose.model(
         required:  true
       },
       date: {
-        type: Date,
-        required: required,
+        type: String,
+        required: true,
+        // mudar para tipo Date depois
       },
       category: {
         type: String,
@@ -28,7 +28,7 @@ const Tasl = mongoose.model(
       },
       user: Object
     },
-    { timestamps: true },
+    { timestamps: true }
   )
 );
 
